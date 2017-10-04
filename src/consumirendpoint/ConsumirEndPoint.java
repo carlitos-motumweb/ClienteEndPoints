@@ -36,7 +36,7 @@ public class ConsumirEndPoint {
         ClientResponse response = resource.accept("application/json").type("application/json").post(ClientResponse.class, input.toString());
         // check response status code
         if (response.getStatus() != 200) {
-            throw new RuntimeException("Failed : HTTP error code : " + response.getStatus());
+            throw new RuntimeException("Se ha presentado un error : " + response.getStatus());
         }
 
         // display response
